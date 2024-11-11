@@ -2,6 +2,7 @@
 const checkbox = document.getElementById('toggleButton');
 
 // checkbox 상태 설정
+// - 사전에 manifest.json에서 storage 접근 허가해둘 필요 있음
 // - storage 상태를 checkbox 상태에 반영하기
 // - 확장프로그램을 설치하고 처음 실행했을 땐 status 값이 undefined -> 버튼 상태 false
 chrome.storage.local.get('status').then((result) => {
@@ -14,7 +15,6 @@ chrome.storage.local.get('status').then((result) => {
 
 // storage 상태 설정
 // - checkbox 상태를 storage 상태에 반영하기
-// - manifest.json에서 storage 접근 허가
 // - chrome.storage.local: 데이터는 로컬에 저장되며 확장 프로그램이 삭제되면 지워짐
 // - { status: true } (X)
 checkbox.addEventListener('change', () => {

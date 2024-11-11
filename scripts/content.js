@@ -13,7 +13,7 @@ function listenerFunc(event) {
   }
 }
 
-// chrome.storage.local.status에 맞춰 로직 변경
+// chrome.storage 상태 변경 이벤트를 감지하여, 새 status 값에 맞춰 로직 변경
 // - onChanged.addEventListener (X)
 // - changes.status.newValue 부분 변경 X
 // - compositionend 이벤트: 조합이 완료되고 최종 글자가 확정될 때 호출 for 최종 문자 다루기
