@@ -14,11 +14,9 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ]
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
     }
-  ]
+  ],
+  "permissions": ["storage"]
 }

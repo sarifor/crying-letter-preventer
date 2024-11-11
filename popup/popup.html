@@ -1,9 +1,65 @@
 <html>
+<head>
+<meta charset="UTF-8">
+<style>
+  /* 공통
+    - Q. BootStrap 같은 CSS 라이브러리로 교체하려면? */
+
+  /* label 스타일
+    - label의 크기를 명시함으로, 팝업창 크기가 변하지 않게 하기 */
+  label {
+    display: inline-flex;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+  }
+
+  /* checkbox 스타일: 체크 전
+    - 기본 스타일 제거
+    - relative: label 내부에서 요소가 나란히 배치 <-> absolute
+    - em: 해당 단위가 사용되고 있는 요소의 font-size 속성값에 비례해서 결정되는 상대 단위 */
+  [type="checkbox"] {
+    appearance: none;
+    position: relative;
+    border: max(1px, 0.2em) solid black;
+    border-radius: 1em;
+    width: 2.4em;
+    height: 1.4em;
+    background-color: black;
+  }
+
+  [type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    transform: scale(0.8);
+    background-color: gray;
+  }
+
+  /* checkbox 스타일: 체크 후 */
+  [type="checkbox"]:checked {
+    background-color: greenyellow;
+    border-color: greenyellow;
+  }
+
+  [type="checkbox"]:checked::before {
+    background-color: white;
+    left: 1em;
+  }
+
+</style>
+</head>
 <body>
-  <div>
-    <!-- Q. 크롬 브라우저에서 실행했을 떄 ㅜ가 깨지는 걸 해결하려면? -->
-    <p>Inputting ㅜ first is ON</p>
-  </div>
-  <button>ON/OFF</button>
+  <!-- 토글 버튼
+    - Q. 크롬 브라우저에서 실행했을 떄 ㅜ가 깨지는 걸 해결하려면? -> <meta charset="UTF-8"> 써주기
+    - Q. popup.js vs. content.js ? -->
+  <label>
+    <input type="checkbox" id="toggleButton"/>
+    <span>Prevent inputing ㅜ first</span>
+  </label>
+  <script src="/scripts/popup.js"></script>
 </body>
 </html>
