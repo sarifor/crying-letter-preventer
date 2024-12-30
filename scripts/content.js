@@ -1,5 +1,4 @@
 // 이벤트 리스너 함수
-// - event.target.value: 현재 입력 필드의 전체 값. 읽기/수정 가능
 //   CF) event.data: 현재 조합된 문자, 읽기만 가능
 // - Q. event.key: 영어, 숫자는 잘 나오는데 한글만 유독 Process라고만 나옴 -> event.target.value 쓰기
 function listenerFunc(event) {
