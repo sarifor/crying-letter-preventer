@@ -1,9 +1,9 @@
 // 이벤트 리스너 함수
-//   CF) event.data: 현재 조합된 문자, 읽기만 가능
-// - Q. event.key: 영어, 숫자는 잘 나오는데 한글만 유독 Process라고만 나옴 -> event.target.value 쓰기
+// - event.constructor.name: compositionEvent
 function listenerFunc(event) {
   let compositionData = '';
   compositionData = event.data;
+  console.log(event.constructor.name);
 
   if (compositionData === 'ㅜ') {
     console.log("ㅜ has been entered!");
