@@ -8,7 +8,7 @@ function listenerFunc(event) {
 
   if (compositionData === 'ㅜ') {
     console.log("ㅜ has been entered!");
-    event.target.value = event.target.value.slice(0, - 1);
+    event.target.value = event.target.value.slice(0, -1);
     alert("ㅜ is now prohibited!");
   }
 }
