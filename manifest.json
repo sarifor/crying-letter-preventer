@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Crying Letter Preventer",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Prevent inputting ㅜ first",
   "icons": {
     "16": "images/icon-16.png",
