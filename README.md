@@ -16,3 +16,7 @@ Chromeブラウザーでのみ使用可能です。
 3. 画面の左上の「パッケージ化されていない拡張機能を読み込む」を選択し、フォルダごとアップロード
 4. Chrome Extensionを実行してボタンをON
 5. 任意のウェブページ（google.co.jpがおすすめ）にアクセスし、「T.T」の入力ができないことを確認
+
+## Screenshots
+![Screenshot1](./README_howToRunPic1.png)
+![Screenshot2](./README_howToRunPic2.png)
