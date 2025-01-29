@@ -25,7 +25,7 @@ checkbox.addEventListener('change', () => {
 
     chrome.storage.local.get(null).then((result) => {
       console.log("chrome.storage.local 모든 값: ", result);
-    }); // ok
+    });
   } else {
     chrome.storage.local.set({ status: "off"}).then(() => {
       console.log("Status has been updated to 'off'!");
